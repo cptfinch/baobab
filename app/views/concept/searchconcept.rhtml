@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Search Concept</title>
+</head>
+<body>
+<h1>Search Concept </h1>
+<%= start_form_tag('javascript:void%200',
+                   {:method=> 'filter'}) %>
+<%=observe_field :search,
+                 :frequency => 0.5,
+                 :update => 'ajaxWrapper',
+                 :complete=>"Element.hide('spinner')",
+                 :before=>"Element.show('spinner')",
+                 :with=>"'search=' + encodeURIComponent(value)",
+                 :url=>{:action=>'searchconcept', :only_path => false} %>
+<%= end_form_tag %>
+</body>
+<html>                                                                                                      

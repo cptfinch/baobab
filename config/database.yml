@@ -1,0 +1,20 @@
+development:
+  adapter: mysql
+  database: blank_development
+  username: root
+  password: 
+  host: localhost
+
+test:
+  adapter: mysql
+  database: blank_test
+  username: root
+  password:
+  host: localhost
+
+healthdata:
+  adapter: mysql
+  database: healthdata
+  username: root
+  password:    
+  host: localhost
